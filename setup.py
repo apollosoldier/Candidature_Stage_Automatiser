@@ -19,7 +19,7 @@ def sendTextMail(text):
 	fromaddr = "Mohamed TRAORE <root@traore.io>"
     listeMail = "/apollosoldier/home/cvSender/mail/list.json"
 	liste_destinataires=[lazer(listMail).getName()'@'lazer(listMail).getdomain()'.com']
-    	mail = MIMEText(text)
+    	mail = MIMEText(text) 
     	mail['From'] = fromaddr
     	mail['Subject'] = "BUILDAUTO"
     	smtp = smtplib.SMTP()
@@ -27,8 +27,7 @@ def sendTextMail(text):
     	for d in liste_destinataires:
     		smtp.sendmail(fromaddr,d,mail.as_string())
     	smtp.close()
- 
- 
+
 def main():
 	logfile = sys.argv[1]
 	f=open(logfile, "r")
