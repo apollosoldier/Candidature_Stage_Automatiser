@@ -18,7 +18,7 @@ from robotchercherDeMail import lazer, predator
 def sendTextMail(text):
 	fromaddr = "Mohamed TRAORE <root@traore.io>"
     listeMail = "/apollosoldier/home/cvSender/mail/list.json"
-	liste_destinataires=['monchef@mondedomaine.com']
+	liste_destinataires=[lazer(listMail).getName()'@'lazer(listMail).getdomain()'.com']
     	mail = MIMEText(text)
     	mail['From'] = fromaddr
     	mail['Subject'] = "BUILDAUTO"
