@@ -58,7 +58,7 @@ def get_indeed_jobs(**params):
             flag = "Jobs fetched successfully."
 
     else:
-        flag = "Jobs not found. Please use a valid Publisher Id along with query keyword or location."
+        flag = "Aucun job trouver. Merci de verifier les valeurs utilisées pour faire les recherches."
 
     return flag
 
@@ -100,7 +100,7 @@ def get_total_jobs(indeed_url):
             json_data = response.json()
             total_jobs = json_data["totalResults"]
     except Exception as e:
-        print("Error getting total jobs! {}".format(e)) 
+        print("Erreur lors de l'acquisition des résulats de jobs! {}".format(e)) 
 
     return total_jobs
 
@@ -171,7 +171,7 @@ def get_indeed_job_listings(indeed_url):
 if __name__ == "__main__":
 
     params = {
-        'publisher': "6e9c05292f3275f5",    # publisher ID (Required)
+        'publisher': "12074664978a6273",    # publisher ID (Required)
         'q': "python",            # Job search query
         'l': "paris",            # location (city / state)
         'co': "fr",           # Country Code
